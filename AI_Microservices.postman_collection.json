@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "AI Microservices",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Postman collection for AI Microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Summarize Text",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw":"{
+  "text": "Enter your text to summarize here."
+}"},
+        "url": {"raw":"http://localhost:8000/summarize","protocol":"http","host":["localhost"],"port":"8000","path":["summarize"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Document Q&A",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw":"{
+  "text": "Enter your document content here.",
+  "question": "Enter your question here."
+}"},
+        "url": {"raw":"http://localhost:8000/qa","protocol":"http","host":["localhost"],"port":"8000","path":["qa"]}
+      },
+      "response": []
+    },
+    {
+      "name": "Dynamic Learning Path",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw":"{
+  "text": "Enter the topic for which you want a learning path."
+}"},
+        "url": {"raw":"http://localhost:8000/learning-path","protocol":"http","host":["localhost"],"port":"8000","path":["learning-path"]}
+      },
+      "response": []
+    }
+  ]
+}
